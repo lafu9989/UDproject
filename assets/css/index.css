@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&family=Poppins:wght@400;700&display=swap');
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} /* remove all default styling */
+
+.skip-link {
+    background: black;
+    color: #fff;
+    font-weight: 700;
+    padding: 4px;
+    position: absolute;
+    text-align: left !important;
+    transform: translateY(-200%);
+    transition: transform 0.3s; 
+}
+
+.skip-link:focus {
+    transform: translateY(0%);
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+  nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+
+  h1, h2 {
+    text-align: center;
+    font-family: 'Merriweather', serif;
+    padding: 0.8em;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  footer {
+    text-align: center;
+    grid-area: foot;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  figure {
+    text-align: center;
+    padding: 0.5em;
+    grid-area: figg;
+  }
+
+  nav {
+    background-color: #B2DB9E;
+    grid-area: navv;
+    max-height: none;
+  }
+
+  li {
+    list-style: none;
+    padding: 1.5em;
+    font-size: larger;
+  }
+
+  p {
+    line-height: 1.5em;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    grid-area: para;
+    text-align: center;
+  }
+
+  header {
+    padding: 0.5em 0;
+    grid-area: head;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    width: 100vw;
+    height: 100vh; 
+    align-items: center;
+    grid-template-columns: 
+     1fr  1fr;
+    grid-template-areas:
+    "head head"
+    "navv navv"
+    "figg para"
+    "foot foot";
+} /* grid template definition */ 
+
+@media screen
+    and (max-width: 640px) {
+        .container {
+            grid-template-columns:
+             1fr; 
+            grid-template-areas:
+            "head"
+            "figg"
+            "para"
+            "navv"
+            "foot";
+        }
+        nav ul {
+            flex-flow: column nowrap;
+            text-align: center;
+        } /* display nav as column */ 
+        nav {
+            max-height: none;
+        }
+    } /* mobile (phone) dimensions */
