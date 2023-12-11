@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Lauren Funston's Class Portal - Previous Projects</title>
+        <link href="assets/css/labs.css" rel="stylesheet">
+        <link href="assets/css/shared.css" rel="stylesheet">
+    </head>
+    <body>
+      <a class="skip-link" href="#maincontent">Skip to main content</a>
+      <div class="container">
+      <header>
+        <h1>Lauren Funston's Class Portal</h1>
+      </header>
+        <nav>
+            <h2 class="sr-only">Main Navigation</h2>
+            <ul>
+              <li>
+                <a class="active" href="index.html">About Me</a>
+              </li>
+              <li>
+                <a href="prev.html">Previous Projects</a>
+              </li>
+              <li>
+                <a href="lab2.html">Lab 2</a>
+              </li>
+              <li>
+                <a href="lab3.html">Lab 3</a>
+              </li>
+              <li>
+                <a href="lab4.html">Lab 4</a>
+              </li>
+              <li>
+                <a href="final.html">Final Project</a>
+              </li>
+            </ul>
+          </nav>
+          <main id="maincontent">
+            <h2>Previous Projects</h2>
+                <section>
+                    <h3>Cat Collector</h3>
+                    <p>Last semester, I took the class CSCI 4448: Object-Oriented Analysis and Design. I worked with my friend to create a Cat Collector game, using the principles of Object-Oriented Programming.</p>
+                    <p>
+                        The game was originally based on the mobile game <i>Neko Atsume: Kitty Collector</i>, in which players are able to use different treats and toys to lure various cat characters to their cat garden. 
+                        My friend and I were both inspired by this game because we both have cats of our own. 
+                    </p>
+                    <figure>
+                        <img src="assets/img/catcollector.png" alt="a pixelated game avatar in a pink shirt surrounded by several cat-related items">
+                        <figcaption>A screenshot from the Cat Collector game, showing the main spawn area</figcaption>
+                    </figure>
+                    <section>
+                        <h4>Technical Information</h4>
+                        <p>The game is coded in Java with various Object-Oriented patterns (such as Factory, Strategy, etc.)</p>
+                        <p>The player's game information is stored in a dynamic <abbr title="JavaScript Object Notation">JSON</abbr> file, stored with the rest of the game files. This allows a player's stats to be saved between games (such as number of cats attracted, inventory, etc.)</p>
+                        <p>GitHub and Notion were used for project management and source code management.</p>
+                    </section>
+                    <section>
+                        <h4>Design Process</h4>
+                        <p>We started by designing an initial diagram of the app's infrastructure. We defined the client layer as the user's input (keyboard/mouse/etc.), the executable/code layer as the Java code we had written (which generated the <abbr title="Graphical User Interface">GUI</abbr>), and the data layer as the various text files we used to store game information.</p>
+                        <figure>
+                            <img src="assets/img/archdiag.png" alt="architecture diagram with three layers">
+                            <figcaption>Our initial design of the app's infrastructure</figcaption>
+                        </figure>
+                        <p>From there, we began developing different features of the game, from designing the characters and sprites to defining the behavior and interactions between various game objects.</p>
+                        <p>Finally, we began to incorporate object-oriented patterns into our game design. This prepared us to start coding the game! </p>
+                    </section>
+                </section>
+            </main>
+            <footer>
+              <small>Made by Lauren Funston &copy; 2023</small>
+            </footer>
+      </div>
+  </body>
+</html>

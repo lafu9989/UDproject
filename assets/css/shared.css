@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Merriweather&family=Poppins:wght@400;700&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* remove all default styling */
+
+figcaption {
+    font-size: small; 
+}
+
+.skip-link {
+  background: black;
+  color: #fff;
+  font-weight: 700;
+  padding: 4px;
+  position: absolute;
+  text-align: left !important;
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+}
+
+.skip-link:focus {
+  transform: translateY(0%);
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+footer {
+  text-align: center;
+  grid-area: foot;
+  margin-bottom: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+figure {
+  text-align: center;
+  padding: 0.5em;
+  grid-area: figg;
+}
+
+img {
+    width: 50vw;
+}
+
+nav {
+  background-color: #B2DB9E;
+  grid-area: navv;
+  max-height: none;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.5em;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    grid-area: para;
+    text-align: center;
+  }
+
+  #maincontent {
+    grid-area: main;
+  }
+  
+  header {
+    padding: 0.5em 0;
+    grid-area: head;
+  }
+
+  nav ul li {
+    font-size: 1.5em;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+  }
+
+  nav ul li:hover {
+    background-color: #ADD69A;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    padding-right: .5em;
+    padding-left: .5em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+    color: black;
+  }
+
+  @media screen and (max-width: 1024px) {
+    h1 {
+        font-size: 3em;
+    }
+    img {
+        width: 80vw;
+    }
+    .container {
+      grid-template-columns:
+        1fr;
+      grid-template-areas:
+        "head"
+        "main"
+        "navv"
+        "foot";
+    }
+  
+    nav ul {
+      flex-flow: column nowrap;
+      text-align: center;
+    }
+
+    /* display nav as column */
+    nav {
+      max-height: none;
+    }
+  }
